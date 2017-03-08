@@ -1,0 +1,23 @@
+{
+  "name": "network-port-walker",
+  "version": "1.0.0",
+  "description": "Script which walks network ports to find an available one",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node demo/server.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "walk",
+    "port",
+    "retry",
+    "server"
+  ],
+  "author": "GBarthos",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.15.2"
+  }
+}
