@@ -1,6 +1,6 @@
 {
   "name": "port-walker",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Check ports status to find an available one",
   "main": "src/index.js",
   "author": "gbarthos <gbarthos.info@gmail.com>",
