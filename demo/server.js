@@ -1,22 +1,30 @@
 "use strict";
 
-var path = require('path');
-var express = require('express');
+const path = require('path');
+const express = require('express');
 
-var walkPort = require('../src');
+const walkPort = require('../src');
 
-var app = express();
+const app = express();
 
-var directory = path.join(__dirname, '/');
-var port = (process.argv[2] || 3360);
+const directory = path.join(__dirname, '/');
+const port = (process.argv[2] || 3360);
 
 app.use(express.static(directory));
 
-var server;
-walkPort(port)
+let server;
+const options = {
+    onBusyPort: (params) => { console.log(' ... port '+params.port+' is busy'); },
+    onRetry: (params, context) => { console.log(' ... retry ('+context.iteration+')'); },
+    retry: 2,
+    timeout: 500
+};
+
+walkPort({ port: port, host: '127.0.0.1' }, options)
     .then((port) => {
         server = app.listen(port, () => {
-            console.log(`Server started at http://localhost:${port}/`);
+            const address = server.address();
+            console.log(`Server started at http://localhost:${address.port}/`);
         });
     })
     .catch((rejection) => {

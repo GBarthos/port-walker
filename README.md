@@ -27,6 +27,8 @@ walkPort({ port: 3000, host: '127.0.0.1' })
     });
 ```
 
+See the demo folder for more advanced options.
+
 ### Api
 ```
 /**
