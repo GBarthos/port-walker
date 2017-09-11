@@ -1,11 +1,20 @@
 {
-  "name": "network-port-walker",
-  "version": "1.0.0",
-  "description": "Script which walks network ports to find an available one",
+  "name": "port-walker",
+  "version": "2.0.0",
+  "description": "Check ports status to find an available one",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node demo/server.js"
+  "author": "gbarthos <gbarthos.info@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/GBarthos/port-walker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GBarthos/port-walker"
+  },
+  "files": [
+    "src"
+  ],
+  "directories": {
+    "lib": "src"
   },
   "keywords": [
     "node",
@@ -15,9 +24,22 @@
     "retry",
     "server"
   ],
-  "author": "GBarthos",
-  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GBarthos/port-walker/issues"
+  },
+  "config": {
+    "port": "3000"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "devDependencies": {
     "express": "^4.15.2"
+  },
+  "engines": {
+    "node": ">=4.x"
+  },
+  "dependencies": {
+    "lodash.clone": "^4.5.0"
   }
 }
