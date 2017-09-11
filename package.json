@@ -2,7 +2,7 @@
   "name": "port-walker",
   "version": "2.0.0",
   "description": "Check ports status to find an available one",
-  "main": "index.js",
+  "main": "src/index.js",
   "author": "gbarthos <gbarthos.info@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/GBarthos/port-walker",
